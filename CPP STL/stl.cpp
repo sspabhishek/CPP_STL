@@ -138,6 +138,7 @@ int main()
 
 //List :
 //List container is similar to the vector
+/*
 int main()
 {
     list<int> ls;
@@ -145,11 +146,37 @@ int main()
     ls.emplace_back(4);
     ls.push_front(5);
     ls.emplace_front(8);
-    list<int>::iterator itr = ls.begin();
+   // list<int>::iterator itr = ls.begin();
     ls.erase(ls.begin(),ls.end());
     for(auto i=ls.begin();i!=ls.end();++i)
     {
         cout<<*i<<" ";
     }
+
+    //Rest function same as vector
+    //begin,end,rbegin, rend, clear, insert, size, swap
+
+}
+*/
+
+//Deque
+int main()
+{
+    deque<int> dq;
+    dq.push_back(1);
+    dq.emplace_back(5);
+    dq.push_front(32);
+    dq.emplace_front(90);
+    dq.pop_back();
+    dq.pop_front();
+    dq.back(); //This function returns a reference to the last element of the deque. Like front(), it does not remove the element from the deque. If the deque is empty, calling back() leads to undefined behavior.
+    dq.front(); //This function returns a reference to the first element of the deque. It does not remove the element from the deque. If the deque is empty, calling front() leads to undefined behavior.
+    for(auto it=dq.begin();it<dq.end();++it)
+    {
+        cout<<*it<<" ";
+    }
+
+     //Rest function same as vector
+    //begin,end,rbegin, rend, clear, insert, size, swap
 
 }
