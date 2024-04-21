@@ -137,4 +137,19 @@ int main()
 */
 
 //List :
-//
+//List container is similar to the vector
+int main()
+{
+    list<int> ls;
+    ls.push_back(2);
+    ls.emplace_back(4);
+    ls.push_front(5);
+    ls.emplace_front(8);
+    list<int>::iterator itr = ls.begin();
+    ls.erase(ls.begin(),ls.end());
+    for(auto i=ls.begin();i!=ls.end();++i)
+    {
+        cout<<*i<<" ";
+    }
+
+}
