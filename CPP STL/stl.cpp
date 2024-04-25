@@ -158,7 +158,7 @@ int main()
 
 }
 */
-
+/*
 //Deque
 int main()
 {
@@ -179,4 +179,33 @@ int main()
      //Rest function same as vector
     //begin,end,rbegin, rend, clear, insert, size, swap
 
+}
+*/
+
+//stack (LIFO : Last in First Out)
+int main()
+{
+    stack<int> st;
+    st.push(1);
+    //st.push(2);
+    //st.push(3);
+    //st.push(3);
+    //st.push(5);
+    cout<<st.top()<<endl;
+    st.pop();
+    //cout<<st.top()<<endl;
+    //cout<<st.size()<<endl;
+    //cout<<st.empty()<<endl;//its return only true(1) or false(0)
+    //cout<<st.top()<<endl;
+    stack<int> st1,st2;
+    st1.push(8);
+    st2.push(12);
+    cout<<st1.top()<<endl;
+    cout<<st2.top()<<endl;
+    st1.swap(st2);
+    cout<<st1.top()<<endl;
+    cout<<st2.top();
+
+
+    //In stack all the operation are in O(1) time
 }
