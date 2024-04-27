@@ -183,6 +183,7 @@ int main()
 */
 
 //stack (LIFO : Last in First Out)
+/*
 int main()
 {
     stack<int> st;
@@ -209,3 +210,56 @@ int main()
 
     //In stack all the operation are in O(1) time
 }
+*/
+
+//Queue FIFO(First In First Out)
+/*
+int main()
+{
+    queue<int> q;
+    q.push(1); //{1}
+    q.push(4); //{1,4}
+    q.emplace(2);//{1,4,2}
+    q.back() += 5; //It will add on back means last of the queue element // means here 2+5 = 7  //{1,4,7}
+    cout<<q.front()<<endl;
+    cout<<q.back();
+
+    q.pop(); //{4,7}
+    cout<<endl<<q.front();
+
+    // size, swap, empty etc. same as stack
+    // Time Complexity = O(1) same as stack
+
+}
+*/
+
+//Priority queue
+
+//In priority queue largest element on the top
+
+int main()
+{
+    //Max Heap
+   /* priority_queue<int> pq;
+    pq.push(5);
+    pq.push(2);
+    pq.push(54);
+    pq.push(34);
+
+    cout<<pq.top()<<endl;
+    pq.pop();
+    cout<<pq.top();
+    */
+    //size, swap, empty etc same as others
+
+    //Minimum Heap
+    priority_queue<int, vector<int>,greater<int>> pq;
+    pq.push(5);
+    pq.push(2);
+    pq.push(8);
+    pq.emplace(10);
+    cout<<endl<<pq.top();
+
+}
+
+
