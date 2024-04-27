@@ -260,6 +260,12 @@ int main()
     pq.emplace(10);
     cout<<endl<<pq.top();
 
+    /*
+    Complexity
+    push = log(n)
+    top = O(1)
+    pop = log(n)
+    */
 }
 
 
