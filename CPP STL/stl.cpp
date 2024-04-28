@@ -236,11 +236,11 @@ int main()
 //Priority queue
 
 //In priority queue largest element on the top
-
+/*
 int main()
 {
     //Max Heap
-   /* priority_queue<int> pq;
+    priority_queue<int> pq;
     pq.push(5);
     pq.push(2);
     pq.push(54);
@@ -249,7 +249,7 @@ int main()
     cout<<pq.top()<<endl;
     pq.pop();
     cout<<pq.top();
-    */
+
     //size, swap, empty etc same as others
 
     //Minimum Heap
@@ -260,12 +260,62 @@ int main()
     pq.emplace(10);
     cout<<endl<<pq.top();
 
-    /*
-    Complexity
-    push = log(n)
-    top = O(1)
-    pop = log(n)
-    */
-}
 
+    //Complexity
+    // push = log(n)
+    // top = O(1)
+    // pop = log(n)
+
+}
+*/
+
+// Set
+// set store in sorted order and only unique element
+int main()
+{
+    set<int> st;
+    st.insert(1); //{1}
+    st.insert(2); //{1,2}
+    st.insert(2); //{1,2}
+    st.insert(4); //{1,2,4}
+    st.insert(3); //{1,2,3,4}
+    st.insert(5); //{1,2,3,4,5}
+
+    //Functionality of insert in vector can be used also, that only increases efficiency
+    //begin(), end(), rbegin(), rend(), size(), empty() and swap are same as those of above
+    for(auto i=st.begin();i!=st.end();i++){
+        cout<<*i<<" ";
+    }
+    //system("cls");
+    auto it = st.find(3); //find is a built-in function in C++ STL which returns an iterator to the element which is searched in the set container. If the element is not found,  then the iterator points to the position just after the last element in the set.
+    cout<<endl<<distance(st.begin(), it) << endl;
+    cout<<*it<<endl;
+    //st.erase(1); //erase 4 // takes logarithmic time
+    for(auto i=st.begin();i!=st.end();i++){
+        cout<<*i<<" ";
+    }
+    int cnt = st.count(3);
+    cout<<endl<<cnt<<endl;
+
+    auto itr = st.find(3);
+    st.erase(it); //It take constant time
+    //{1,2,3,4,5}
+    auto it1 = st.find(2);
+    auto it2 = st.find(4);
+    st.erase(it1,it2); // after erase {1,4,5}
+    for(auto i=st.begin();i!=st.end();i++){
+        cout<<*i<<" ";
+    }
+    cout<<endl;
+    //lower_bound() and upper_bound() function works in the same way as in vector it does.
+    //This is the syntax
+    auto it3 = st.lower_bound(4);
+    auto it4 = st.upper_bound(5);
+    st.erase(it3,it4); //{1}
+    for(auto i=st.begin();i!=st.end();i++){
+        cout<<*i<<" ";
+    }
+
+    //In set every things take (log n) time
+}
 
