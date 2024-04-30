@@ -271,6 +271,7 @@ int main()
 
 // Set
 // set store in sorted order and only unique element
+/*
 int main()
 {
     set<int> st;
@@ -318,4 +319,36 @@ int main()
 
     //In set every things take (log n) time
 }
+*/
 
+//Multiset
+int main()
+{
+    // Everything same as set
+    // stores duplicati elements also
+    multiset<int> ms;
+    ms.insert(1); //{1}
+    ms.insert(1); //{1,1}
+    ms.insert(1); //{1,1,1}
+    ms.insert(1); //{1,1,1,1}
+    ms.insert(5); //{1,1,1,1,5}
+
+
+    //ms.erase(1); // It will erase all 1 of the set
+
+    // if you want only a single 1 erased
+    //ms.erase(ms.find(1));
+
+
+    //ms.erase(ms.begin(), ms.end());
+
+    int cnt = ms.count(1);
+    cout<<cnt<<endl;
+
+    for(auto it : ms)
+    {
+        cout<<it<<" ";
+    }
+
+    //rest all function same as set
+}
