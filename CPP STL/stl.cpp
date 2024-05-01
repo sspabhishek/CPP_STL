@@ -322,6 +322,7 @@ int main()
 */
 
 //Multiset
+/*
 int main()
 {
     // Everything same as set
@@ -351,4 +352,30 @@ int main()
     }
 
     //rest all function same as set
+}
+*/
+
+//Unordered set
+/*
+int main()
+{
+    //lower_bound and upper_bound function does not works, rest all function\
+    are same as above, it does not stores in any particular order it has a better\
+    than set most cases, expect some when collision happens
+
+    unordered_set<int> ust;
+    ust.insert(34);
+    ust.insert(9);
+    ust.emplace(67);
+    ust.erase(9);
+    for(auto i:ust){
+        cout<<i<<" ";
+    }
+}
+*/
+
+//Map Container
+int main()
+{
+
 }
