@@ -373,9 +373,54 @@ int main()
     }
 }
 */
-
+/*
 //Map Container
 int main()
 {
+    map<int, int>mpp;
+
+    //map<int, pair<int,int>>mpp;
+    //map<pair<int,int>,int>mpp;
+
+    mpp[1]=2;
+    //cout<<mpp[1]<<endl;
+    mpp.emplace(3,1);
+    mpp.insert({2,4});
+    //mpp[{2,3}]=10;
+    for(auto it : mpp){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    cout<<mpp[2]<<endl;
+    cout<<mpp[5]<<endl;
+
+    auto it = mpp.find(3);
+    cout<<it->first<<" "<<it->second<<endl;
+
+    //auto it = mpp.find(5);
+
+    //this is the syntax
+    //auto it1 = mpp.lower_bound(2);
+    //auto it2 = mpp/upper_bound(3);
+
+    //erase, swap, size, empty, are same as above
+}
+*/
+/*
+//multimap
+int main()
+{
+    multimap<int,int>mpp;
+    //every thing same as map, only, it can store multiple keys\
+    only mpp[key] can not be used here\
+    multimap stores duplicate key also
+}
+*/
+/*
+//Unoreder_Map
+int main()
+{
+    unordered_map<int, int>mpp;
+    //same as set and unordered set difference is it work most of the time O(1)
 
 }
+*/
